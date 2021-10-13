@@ -1,11 +1,9 @@
 const path = require("path");
 const express = require("express");
 const app = express();
-
+const dotenv = require("dotenv");
 const car = require("./db/cars");
 const login = require("./auth/login.js");
-
-let port_number = server.listen(process.env.PORT || 5000);
 
 const { authToken } = require("./middleware");
 
@@ -29,4 +27,4 @@ app.get("*", (req, res) => {
   );
 });
 
-app.listen(port_number);
+app.listen(process.env.PORT || 5000);
