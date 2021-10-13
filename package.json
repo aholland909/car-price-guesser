@@ -4,7 +4,7 @@
   "description": "Car price guessing game",
   "main": "app.js",
   "scripts": {
-    "build": "yarn && yarn --cwd ./apps/car-guesser/ build",
+    "build": "yarn --cwd ./apps/car-guesser/ && yarn --cwd ./apps/car-guesser/ build",
     "dev": "nodemon --exec babel-node ./app.js --prefix client",
     "start": "npm run build && node app.js"
   },
