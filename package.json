@@ -5,8 +5,7 @@
   "main": "app.js",
   "scripts": {
     "build": "yarn --cwd ./apps/car-guesser/ && yarn --cwd ./apps/car-guesser/ build",
-    "dev": "nodemon --exec babel-node ./app.js --prefix client",
-    "start": "npm run build && node app.js"
+    "start": "nodemon --exec babel-node ./app.js"
   },
   "engines": {
     "node": "16.x",
