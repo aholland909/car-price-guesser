@@ -1,12 +1,11 @@
-import path from "path";
-import express from "express";
+const path = require("path");
+const express = require("express");
 const app = express();
 
-import car from "./db/cars";
-import login from "./auth/login.js";
-import signup from "./auth/signup.js";
+const car = require("./db/cars");
+const login = require("./auth/login.js");
 
-import { authToken } from "./middleware";
+const { authToken } = require("./middleware");
 
 app.use(express.json({ limit: "500mb" }));
 app.use(express.static(path.resolve(__dirname, "./apps/car-guesser/build")));

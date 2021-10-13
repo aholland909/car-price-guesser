@@ -1,9 +1,9 @@
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const dotenv = require("dotenv");
 dotenv.config();
-import User from "../db/user.js";
-import { validUser } from "../utils/validateUser.js";
+const User = require("../db/user.js");
+const { validUser } = require("../utils/validateUser.js");
 
 //login a user
 exports.loginUser = (req, res, next) => {

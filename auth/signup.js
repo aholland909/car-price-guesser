@@ -1,7 +1,7 @@
-import bcrypt from "bcrypt";
-import dotenv from "dotenv";
-import User from "../db/user.js";
-import { validUser } from "../utils/validateUser.js";
+const bcrypt = require("bcrypt");
+const dotenv = require("dotenv");
+const User = require("../db/user.js");
+const { validUser } = require("../utils/validateUser.js");
 
 dotenv.config();
 
