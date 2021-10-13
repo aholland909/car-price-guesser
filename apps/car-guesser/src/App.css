@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.car-image {
+  height: 350px;
+  width: auto;
+  margin: auto;
+}
+
+@media only screen and (max-width: 480px) {
+  .car-image {
+    height: 250px;
+  }
+}
