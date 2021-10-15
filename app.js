@@ -12,13 +12,9 @@ app.use(express.static(path.resolve(__dirname, "./apps/car-guesser/build")));
 
 app.get("/car/:id", car.getCar);
 app.get("/randomcar/", car.randomCar);
-app.post("/upload/", car.uploadCar);
+app.post("/upload/", authToken, car.uploadCar);
 
 app.post("/login/", login.loginUser);
-
-app.get("/protected/", authToken, (req, res) => {
-  res.send("Nice one");
-});
 
 app.get("*", (req, res) => {
   console.log(__dirname);
