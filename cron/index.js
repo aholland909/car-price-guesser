@@ -27,13 +27,13 @@ async function getCars() {
         let findCar = await car.findCar(currentCar.auctionId);
         if (findCar) {
           console.log(`${currentCar.auctionId} is already in database`);
-          // getData = false;
         } else {
           //add to database
           car.uploadCar(currentCar);
+          console.log(`Added ${currentCar.auctionId}`);
         }
       }
-      getData = false;
+      page++;
     }
   } catch (error) {
     console.error(error);

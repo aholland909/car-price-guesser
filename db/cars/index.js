@@ -36,7 +36,7 @@ exports.uploadCars = (req, res, next) => {
         price: car.priceSold,
         image: car.mainImageUrl,
         slug: car.slug,
-        dateSold: car.dtSoldUTC
+        dateSold: car.dtSoldUTC,
       });
     }
     return result;
@@ -70,11 +70,8 @@ exports.uploadCar = (car) => {
         price: car.priceSold,
         image: car.mainImageUrl,
         slug: car.slug,
-        dateSold: car.dtSoldUTC
-      }
-    })
-    .then((response) => {
-      console.log(response);
+        dateSold: car.dtSoldUTC,
+      },
     })
     .catch((err) => {
       console.log(err);
@@ -84,10 +81,9 @@ exports.uploadCar = (car) => {
 
 //find a car by auction id
 exports.findCar = async (id) => {
-  return await prisma.cars
-    .findFirst({
-      where: {
-        id,
-      },
-    })
+  return await prisma.cars.findFirst({
+    where: {
+      id,
+    },
+  });
 };
