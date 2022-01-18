@@ -11,11 +11,11 @@ exports.getOneByEmail = (email) => {
 };
 
 exports.addUser = (user) => {
-  console.log(user);
   return prisma.users.create({
     data: {
       email: user.email,
       password: user.hash,
+      role: "USER"
     },
   });
 };

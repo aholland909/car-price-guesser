@@ -15,6 +15,7 @@ model cars {
   price Int
   image String?
   slug  String?
+  dateSold String?
 }
 
 model Users {
