@@ -21,6 +21,14 @@
   margin: auto;
 }
 
+h1 {
+  margin: 1rem;
+}
+
+p {
+  margin: 1rem;
+}
+
 @media only screen and (max-width: 480px) {
   .car-image {
     height: 250px;

@@ -58,10 +58,18 @@ function CarCard() {
     setShowAnswer(!showAnswer);
   }
 
+  function formatSoldDate(date) {
+    if (date) {
+      const splitDate = date.split(" ")[0];
+      return new Date(splitDate).toLocaleDateString()
+    }
+  }
+
   return (
     <div>
       <h1>Guess the price!</h1>
       {<p>{current.title}</p>}
+      {<p>Sold on {formatSoldDate(current.dateSold)}</p>}
       <img src={current.image} className="car-image" alt={current.title} />
       <div className="App-input">
         <label>
